@@ -1,6 +1,6 @@
-# React + Tailwind CSS + Zustand Template
+# React + Tailwind CSS + Redux Template
 
-A modern, lightweight React starter template with Tailwind CSS for styling and Zustand for state management. This template provides a clean, organized structure to kickstart your React projects with best practices.
+A modern, lightweight React starter template with Tailwind CSS for styling and Redux Toolkit for state management. This template provides a clean, organized structure to kickstart your React projects with best practices.
 
 ## 📚 Documentation
 
@@ -11,7 +11,7 @@ For detailed documentation on available hooks, components, and state management,
 - ⚡️ **Vite** — Lightning fast development and build
 - 🔄 **React 18** with TypeScript
 - 🎨 **Tailwind CSS** — Utility-first CSS framework
-- 🗃️ **Zustand** — Simple, fast state management
+- 🗃️ **Redux Toolkit** — Modern, efficient state management with Redux
 - 🌓 **Dark Mode** — Built-in dark mode support
 - 🌐 **API Client** — Axios setup with interceptors and typed service pattern
 - ⚙️ **Environment Config** — Type-safe access to environment variables
@@ -27,7 +27,7 @@ For detailed documentation on available hooks, components, and state management,
 
 ```bash
 # Clone the template
-npx degit react-templates-by-amar/tailwind-zustand
+npx degit react-templates-by-amar/tailwind-redux
 
 # Install dependencies
 npm install
@@ -40,7 +40,7 @@ npm run dev
 
 ```bash
 # Clone the repository
-git clone https://github.com/react-templates-by-amar/tailwind-zustand.git
+git clone https://github.com/react-templates-by-amar/tailwind-redux.git
 
 
 # Remove git history
@@ -63,7 +63,7 @@ npm run dev
 │   │   ├── ui/          # Reusable UI components (Button, LoadingSpinner, etc.)
 │   │   └── ...          # Other feature components
 │   ├── hooks/           # Custom React hooks
-│   ├── store/           # Zustand store definitions
+│   ├── store/           # Redux store and slice definitions
 │   ├── styles/          # Global styles and Tailwind config
 │   ├── types/           # TypeScript type definitions
 │   ├── utils/           # Utility functions including HTTP client
@@ -100,7 +100,13 @@ export default {
 
 ### State Management
 
-Zustand stores are located in the `src/store` directory. The template includes a basic counter store as an example.
+Redux store and slices are located in the `src/store` directory. The template follows the Redux Toolkit pattern with a structured approach:
+
+- `store/store.ts` - Main Redux store configuration
+- `store/hooks.ts` - Typed hooks for Redux (useAppDispatch, useAppSelector)
+- `store/slices/` - Individual feature slices
+
+The template includes a basic counter slice as an example of Redux Toolkit usage.
 
 ## Available Scripts
 
