@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+
+:root {
+  --background: 255 255 255;
+  --foreground: 13 13 18;
+  --text-primary: 23 23 23;
+  --text-secondary: 82 82 91;
+  --text-muted: 113 113 122;
+  --text-accent: 14 165 233;
+}
+
+.dark {
+  --background: 13 13 18;
+  --foreground: 250 250 250;
+  --text-primary: 250 250 250;
+  --text-secondary: 212 212 216;
+  --text-muted: 161 161 170;
+  --text-accent: 56 189 248;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Apply theme-based text colors to common text elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(var(--text-primary));
+  transition: color 0.3s ease;
+}
+
+p,
+span,
+div,
+li {
+  color: rgb(var(--text-primary));
+  transition: color 0.3s ease;
+}
+
+.text-secondary {
+  color: rgb(var(--text-secondary));
+}
+
+.text-muted {
+  color: rgb(var(--text-muted));
+}
+
+.text-accent {
+  color: rgb(var(--text-accent));
+}
+
+@layer components {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
